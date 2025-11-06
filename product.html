@@ -3,25 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tara Adornments - Exquisite Jewelry Collection</title>
-    <meta name="description" content="Discover exquisite jewelry at Tara Adornments. Premium necklaces, earrings, bracelets, and rings crafted with elegance and style.">
-    <link rel="canonical" href="https://taraadornments.com/">
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="Tara Adornments - Exquisite Jewelry Collection">
-    <meta property="og:description" content="Discover exquisite jewelry at Tara Adornments. Premium necklaces, earrings, bracelets, and rings crafted with elegance and style.">
-    <meta property="og:image" content="https://images.pexels.com/photos/1454171/pexels-photo-1454171.jpeg?auto=compress&cs=tinysrgb&w=1200">
-    <meta property="og:url" content="https://taraadornments.com/">
-    <meta property="og:type" content="website">
-    
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Tara Adornments - Exquisite Jewelry Collection">
-    <meta name="twitter:description" content="Discover exquisite jewelry at Tara Adornments. Premium necklaces, earrings, bracelets, and rings crafted with elegance and style.">
-    <meta name="twitter:image" content="https://images.pexels.com/photos/1454171/pexels-photo-1454171.jpeg?auto=compress&cs=tinysrgb&w=1200">
+    <title id="page-title">Product - Tara Adornments</title>
+    <meta name="description" id="page-description" content="View product details at Tara Adornments">
+    <link rel="canonical" id="page-canonical" href="https://taraadornments.com/product.html">
     
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="preload" href="https://images.pexels.com/photos/1454171/pexels-photo-1454171.jpeg?auto=compress&cs=tinysrgb&w=800" as="image">
 </head>
 <body>
     <!-- Promo Bar -->
@@ -127,95 +113,149 @@
     </div>
 
     <!-- Main Content -->
-    <main>
-        <!-- Hero Section -->
-        <section class="relative py-20 px-4 sm:px-6 lg:px-8">
-            <div class="max-w-7xl mx-auto">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    <div class="space-y-8">
-                        <h1 class="font-display text-5xl lg:text-6xl font-bold text-text leading-tight">
-                            Exquisite
-                            <span class="text-maroon-400">Jewelry</span>
-                            for Every
-                            <span class="text-gold-400">Occasion</span>
-                        </h1>
-                        <p class="text-xl text-muted leading-relaxed">
-                            Discover our curated collection of premium jewelry crafted with precision and elegance. From timeless classics to contemporary designs.
-                        </p>
-                        <div class="flex flex-col sm:flex-row gap-4">
-                            <a href="/products.html" class="btn-primary text-center">
-                                Shop Now
-                            </a>
-                            <a href="/about.html" class="btn-secondary text-center">
-                                Our Story
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="relative">
-                        <div class="card p-8">
+    <main class="py-8 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <!-- Breadcrumb -->
+            <nav class="mb-8" aria-label="Breadcrumb">
+                <ol class="flex items-center space-x-2 text-sm">
+                    <li><a href="/" class="text-muted hover:text-text transition-colors">Home</a></li>
+                    <li class="text-muted">›</li>
+                    <li><a href="/products.html" class="text-muted hover:text-text transition-colors">Products</a></li>
+                    <li class="text-muted">›</li>
+                    <li id="breadcrumb-product" class="text-text">Product</li>
+                </ol>
+            </nav>
+
+            <!-- Product Details -->
+            <div id="product-content" class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Product Images -->
+                <div class="space-y-4">
+                    <div class="sticky top-24">
+                        <div class="card p-6 mb-4">
                             <img 
-                                src="https://images.pexels.com/photos/1454171/pexels-photo-1454171.jpeg?auto=compress&cs=tinysrgb&w=800" 
-                                alt="Featured jewelry piece"
+                                id="main-image" 
+                                src="" 
+                                alt="" 
                                 class="w-full h-96 object-cover rounded-xl"
                             />
-                            <div class="mt-6 text-center">
-                                <h3 class="font-display text-xl font-semibold text-text mb-2">Featured Collection</h3>
-                                <p class="text-muted mb-4">White Stones Elegance Gold Necklace</p>
-                                <a href="/product.html?id=white-stones-elegance-gold-necklace" class="btn-primary">
-                                    View Details
-                                </a>
+                        </div>
+                        
+                        <div id="thumbnail-container" class="grid grid-cols-4 gap-2">
+                            <!-- Thumbnails will be loaded here -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Info -->
+                <div class="space-y-8">
+                    <div>
+                        <p class="text-maroon-400 font-medium mb-2">Tara Adornments</p>
+                        <h1 id="product-title" class="font-display text-4xl font-bold text-text mb-4"></h1>
+                        <p id="product-sku" class="text-muted text-sm mb-4"></p>
+                        
+                        <div class="flex items-center gap-4 mb-6">
+                            <span id="product-price" class="text-gold-400 font-bold text-3xl"></span>
+                            <span id="product-original-price" class="text-muted line-through text-xl hidden"></span>
+                            <span id="product-discount" class="badge hidden"></span>
+                        </div>
+                        
+                        <p id="product-description" class="text-muted text-lg leading-relaxed"></p>
+                    </div>
+
+                    <!-- Quantity & Add to Cart -->
+                    <div class="space-y-6">
+                        <div>
+                            <label class="block text-text font-medium mb-2">Quantity</label>
+                            <div id="quantity-selector" class="mb-4">
+                                <!-- Quantity selector will be rendered here -->
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-4">
+                            <button id="add-to-cart" class="flex-1 btn-primary">
+                                Add to Cart
+                            </button>
+                            <button id="buy-now" class="flex-1 btn-secondary">
+                                Buy Now
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Product Details Accordions -->
+                    <div class="space-y-4">
+                        <div class="border-b border-subtle">
+                            <button class="accordion-trigger w-full flex items-center justify-between py-4 text-left focus:outline-none focus:ring-2 focus:ring-maroon-500 rounded-lg" aria-expanded="true">
+                                <span class="font-display font-semibold text-text">Highlights</span>
+                                <svg class="accordion-icon w-5 h-5 text-muted transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div class="accordion-content overflow-hidden transition-all duration-300" style="max-height: 200px; opacity: 1;">
+                                <div class="pb-4">
+                                    <ul id="product-highlights" class="space-y-2 text-muted">
+                                        <!-- Highlights will be loaded here -->
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="border-b border-subtle">
+                            <button class="accordion-trigger w-full flex items-center justify-between py-4 text-left focus:outline-none focus:ring-2 focus:ring-maroon-500 rounded-lg" aria-expanded="false">
+                                <span class="font-display font-semibold text-text">Size & Fit</span>
+                                <svg class="accordion-icon w-5 h-5 text-muted transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div class="accordion-content overflow-hidden transition-all duration-300" style="max-height: 0px; opacity: 0;">
+                                <div class="pb-4">
+                                    <p id="product-size-guide" class="text-muted"></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="border-b border-subtle">
+                            <button class="accordion-trigger w-full flex items-center justify-between py-4 text-left focus:outline-none focus:ring-2 focus:ring-maroon-500 rounded-lg" aria-expanded="false">
+                                <span class="font-display font-semibold text-text">Shipping & Returns</span>
+                                <svg class="accordion-icon w-5 h-5 text-muted transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div class="accordion-content overflow-hidden transition-all duration-300" style="max-height: 0px; opacity: 0;">
+                                <div class="pb-4">
+                                    <div class="space-y-3 text-muted">
+                                        <p>• Free shipping on orders above ₹500</p>
+                                        <p>• Standard delivery: 3-5 business days</p>
+                                        <p>• Express delivery: 1-2 business days (additional charges apply)</p>
+                                        <p>• 30-day return policy</p>
+                                        <p>• Easy returns and exchanges</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="border-b border-subtle">
+                            <button class="accordion-trigger w-full flex items-center justify-between py-4 text-left focus:outline-none focus:ring-2 focus:ring-maroon-500 rounded-lg" aria-expanded="false">
+                                <span class="font-display font-semibold text-text">Care Instructions</span>
+                                <svg class="accordion-icon w-5 h-5 text-muted transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div class="accordion-content overflow-hidden transition-all duration-300" style="max-height: 0px; opacity: 0;">
+                                <div class="pb-4">
+                                    <div class="space-y-3 text-muted">
+                                        <p>• Store in a dry place away from moisture</p>
+                                        <p>• Clean with a soft, dry cloth</p>
+                                        <p>• Avoid contact with perfumes and chemicals</p>
+                                        <p>• Remove before swimming or bathing</p>
+                                        <p>• Store separately to prevent scratching</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <!-- Featured Products -->
-        <section class="py-20 px-4 sm:px-6 lg:px-8">
-            <div class="max-w-7xl mx-auto">
-                <div class="text-center mb-16">
-                    <h2 class="font-display text-4xl font-bold text-text mb-4">Featured Collection</h2>
-                    <p class="text-xl text-muted">Handpicked pieces that define elegance</p>
-                </div>
-                
-                <div id="featured-products" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Products will be loaded here -->
-                </div>
-                
-                <div class="text-center mt-12">
-                    <a href="/products.html" class="btn-primary">
-                        View All Products
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Newsletter -->
-        <section class="py-20 px-4 sm:px-6 lg:px-8">
-            <div class="max-w-4xl mx-auto">
-                <div class="card p-12 text-center">
-                    <h2 class="font-display text-3xl font-bold text-text mb-4">Stay Updated</h2>
-                    <p class="text-xl text-muted mb-8">Get notified about new collections and exclusive offers</p>
-                    
-                    <form id="newsletter-form" class="max-w-md mx-auto">
-                        <div class="flex gap-4">
-                            <input 
-                                type="email" 
-                                id="newsletter-email"
-                                placeholder="Enter your email" 
-                                class="input flex-1"
-                                required
-                            />
-                            <button type="submit" class="btn-primary">
-                                Subscribe
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
+        </div>
     </main>
 
     <!-- Footer -->
@@ -296,10 +336,16 @@
         </div>
     </footer>
 
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json" id="product-schema">
+    </script>
+
     <script type="module">
         import { PRODUCTS } from './js/data.js';
+        import { cartStore } from './js/store.js';
         import Header from './js/ui/header.js';
-        import { createProductCard, setupProductCardEvents } from './js/ui/product-card.js';
+        import { createQuantitySelector } from './js/ui/quantity.js';
+        import { setupAccordions } from './js/ui/accordion.js';
         import Toast from './js/ui/toast.js';
 
         // Make products globally available
@@ -308,29 +354,133 @@
         // Initialize header
         new Header();
 
-        // Setup product card events
-        setupProductCardEvents();
+        // Setup accordions
+        setupAccordions();
 
-        // Load featured products
-        const featuredProducts = PRODUCTS.filter(p => p.tags.includes('featured')).slice(0, 3);
-        const featuredContainer = document.getElementById('featured-products');
-        
-        if (featuredContainer) {
-            featuredContainer.innerHTML = featuredProducts.map(createProductCard).join('');
+        // Get product ID from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('id');
+
+        if (!productId) {
+            window.location.href = '/products.html';
         }
 
-        // Newsletter form
-        const newsletterForm = document.getElementById('newsletter-form');
-        if (newsletterForm) {
-            newsletterForm.addEventListener('submit', (e) => {
-                e.preventDefault();
-                const email = document.getElementById('newsletter-email').value;
-                if (email) {
-                    Toast.show('Thank you for subscribing!');
-                    newsletterForm.reset();
-                }
-            });
+        const product = PRODUCTS.find(p => p.id === productId);
+
+        if (!product) {
+            window.location.href = '/products.html';
         }
+
+        // Update page metadata
+        document.getElementById('page-title').textContent = `${product.title} - Tara Adornments`;
+        document.getElementById('page-description').content = product.description;
+        document.getElementById('page-canonical').href = `https://taraadornments.com/product.html?id=${product.id}`;
+
+        // Update breadcrumb
+        document.getElementById('breadcrumb-product').textContent = product.title;
+
+        // Render product details
+        document.getElementById('product-title').textContent = product.title;
+        document.getElementById('product-sku').textContent = `SKU: ${product.sku}`;
+        document.getElementById('product-price').textContent = `₹${product.price.toLocaleString()}`;
+        document.getElementById('product-description').textContent = product.description;
+
+        if (product.originalPrice) {
+            document.getElementById('product-original-price').textContent = `₹${product.originalPrice.toLocaleString()}`;
+            document.getElementById('product-original-price').classList.remove('hidden');
+            
+            const discount = Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100);
+            document.getElementById('product-discount').textContent = `${discount}% OFF`;
+            document.getElementById('product-discount').classList.remove('hidden');
+        }
+
+        // Render main image
+        const mainImage = document.getElementById('main-image');
+        mainImage.src = product.images[0];
+        mainImage.alt = product.title;
+
+        // Render thumbnails
+        const thumbnailContainer = document.getElementById('thumbnail-container');
+        thumbnailContainer.innerHTML = product.images.map((image, index) => `
+            <button class="thumbnail-btn card p-2 hover:ring-2 hover:ring-maroon-500 transition-all ${index === 0 ? 'ring-2 ring-maroon-500' : ''}" data-image="${image}">
+                <img src="${image}" alt="${product.title} ${index + 1}" class="w-full h-16 object-cover rounded-lg" />
+            </button>
+        `).join('');
+
+        // Thumbnail click handlers
+        document.addEventListener('click', (e) => {
+            if (e.target.closest('.thumbnail-btn')) {
+                const btn = e.target.closest('.thumbnail-btn');
+                const image = btn.dataset.image;
+                
+                // Update main image with fade effect
+                mainImage.style.opacity = '0';
+                setTimeout(() => {
+                    mainImage.src = image;
+                    mainImage.style.opacity = '1';
+                }, 150);
+                
+                // Update active thumbnail
+                document.querySelectorAll('.thumbnail-btn').forEach(b => b.classList.remove('ring-2', 'ring-maroon-500'));
+                btn.classList.add('ring-2', 'ring-maroon-500');
+            }
+        });
+
+        // Render highlights
+        const highlightsList = document.getElementById('product-highlights');
+        highlightsList.innerHTML = product.highlights.map(highlight => `
+            <li class="flex items-start gap-2">
+                <span class="text-maroon-400 mt-1">•</span>
+                <span>${highlight}</span>
+            </li>
+        `).join('');
+
+        // Render size guide
+        document.getElementById('product-size-guide').textContent = product.sizeGuide;
+
+        // Setup quantity selector
+        let selectedQuantity = 1;
+        const quantitySelector = createQuantitySelector(1, (quantity) => {
+            selectedQuantity = quantity;
+        });
+
+        document.getElementById('quantity-selector').innerHTML = quantitySelector.render();
+        quantitySelector.bindEvents();
+
+        // Add to cart functionality
+        document.getElementById('add-to-cart').addEventListener('click', () => {
+            cartStore.addItem(product, selectedQuantity);
+            Toast.show(`${product.title} added to cart!`);
+        });
+
+        // Buy now functionality
+        document.getElementById('buy-now').addEventListener('click', () => {
+            cartStore.addItem(product, selectedQuantity);
+            window.location.href = '/cart.html';
+        });
+
+        // JSON-LD Schema
+        const schema = {
+            "@context": "https://schema.org/",
+            "@type": "Product",
+            "name": product.title,
+            "image": product.images,
+            "description": product.description,
+            "sku": product.sku,
+            "brand": {
+                "@type": "Brand",
+                "name": "Tara Adornments"
+            },
+            "offers": {
+                "@type": "Offer",
+                "url": `https://taraadornments.com/product.html?id=${product.id}`,
+                "priceCurrency": "INR",
+                "price": product.price,
+                "availability": product.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock"
+            }
+        };
+
+        document.getElementById('product-schema').textContent = JSON.stringify(schema);
 
         // Update current year
         document.getElementById('current-year').textContent = new Date().getFullYear();
