@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+@layer base {
+  body {
+    @apply bg-background text-text font-sans;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-maroon-600 hover:bg-maroon-700 text-white px-6 py-3 rounded-2xl font-medium transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-maroon-500 focus:ring-offset-2 focus:ring-offset-background;
+  }
+  
+  .btn-secondary {
+    @apply bg-transparent border-2 border-maroon-600 text-maroon-600 hover:bg-maroon-600 hover:text-white px-6 py-3 rounded-2xl font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-maroon-500 focus:ring-offset-2 focus:ring-offset-background;
+  }
+  
+  .card {
+    @apply bg-maroon-900/20 backdrop-blur-sm border border-subtle rounded-2xl shadow-card;
+  }
+  
+  .input {
+    @apply bg-maroon-900/30 border border-subtle rounded-xl px-4 py-3 text-text placeholder-muted focus:outline-none focus:ring-2 focus:ring-maroon-500 focus:border-transparent;
+  }
+  
+  .badge {
+    @apply bg-gradient-to-r from-gold-400 to-yellow-500 text-black px-3 py-1 rounded-full text-sm font-medium;
+  }
+  
+  .cart-bump {
+    animation: cartBump 0.3s ease-out;
+  }
+}
+
+@keyframes cartBump {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

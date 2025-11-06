@@ -1,39 +1,32 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  content: ['./*.html', './js/**/*.js'],
   theme: {
     extend: {
       colors: {
-        navy: {
-          50: '#f0f9ff',
-          100: '#e0f2fe',
-          200: '#bae6fd',
-          300: '#7dd3fc',
-          400: '#38bdf8',
-          500: '#0ea5e9',
-          600: '#0284c7',
-          700: '#0369a1',
-          800: '#075985',
-          900: '#0c4a6e',
-          950: '#082f49',
+        maroon: {
+          900: '#3a0707',
+          800: '#4a0a0a',
+          700: '#6b0e0e',
+          600: '#8b1717',
+          500: '#a91f1f',
         },
+        gold: {
+          400: '#d4af37',
+        },
+        background: '#0f0b0b',
+        text: '#ffffff',
+        muted: '#e9e2df',
+      },
+      borderColor: {
+        subtle: 'rgba(255,255,255,.12)',
+      },
+      boxShadow: {
+        card: '0 10px 30px rgba(0,0,0,.35)',
       },
       fontFamily: {
-        poppins: ['Poppins', 'sans-serif'],
-      },
-      animation: {
-        'pulse-ring': 'pulse-ring 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite',
-        'glow': 'glow 2s ease-in-out infinite alternate',
-      },
-      keyframes: {
-        'pulse-ring': {
-          '0%': { transform: 'scale(0.33)' },
-          '80%, 100%': { opacity: '0' },
-        },
-        'glow': {
-          'from': { boxShadow: '0 0 20px #3b82f6' },
-          'to': { boxShadow: '0 0 30px #60a5fa, 0 0 40px #3b82f6' },
-        },
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        display: ['Playfair Display', 'serif'],
       },
     },
   },
